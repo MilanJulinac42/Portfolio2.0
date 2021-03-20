@@ -25,29 +25,31 @@
       <nav>
         <h1>[milan <span>julinac</span>]</h1>
         <div class="navigation">
-          <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">work</a></li>
-            <li><a href="#">contact</a></li>
+          <ul class="nav-links">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#work">work</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
+        </div>
+        <div class="burger">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
         </div>
       </nav>
 
-      <section class="welcome-section">
+      <section class="welcome-section" id="home">
         <div class="animation-box">
           <h2>Hi, I am Milan</h2>
           <p class="text-big">a full-stack web developer</p>
         </div>
         <p class="text-medium">
-          This is my personal portfolio, you can find my projects, see my skills
-          and contact me Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Modi adipisci amet labore qui officia? Mollitia distinctio enim
-          corporis iure pariatur.
+          Hello there person on the internet! This is my personal portfolio, here you can find my projects, learn more about me, see my skills and contact me. Have a nice day...
         </p>
       </section>
     </header>
-    <section class="skills-section">
+    <section class="skills-section" id="about">
       <div class="container">
         <h2 data-aos="zoom-in" data-aos-duration="1000">MY SKILLS</h2>
         <span data-aos="zoom-in" data-aos-duration="1000"></span>
@@ -92,13 +94,13 @@
             </p>
             <div class="skill">
               <ul>
-                <li>| Java |</li>
                 <li>| Node.JS |</li>
                 <li>| MySQL |</li>
                 <li>| MongoDB |</li>
                 <li>| Validation |</li>
-                <li>| GraphQL |</li>
                 <li>| Testing |</li>
+                <li>| REST |</li>
+                <li>| Express |</li>
               </ul>
             </div>
           </div>
@@ -133,7 +135,7 @@
     </section>
     <section class="more-about-me">
       <div class="about-container">
-        <div class="sisaj">
+        <div class="trait">
           <h2><i class="far fa-keyboard"></i> Quick learner.</h2>
           <p>
             Fast learner, able to grasp new concepts quickly. Good capacity to
@@ -142,26 +144,26 @@
             solutiuns to solve problem.
           </p>
         </div>
-        <div class="sisaj">
+        <div class="trait">
           <h2><i class="fas fa-cloud"></i> Reliable.</h2>
           <p>
             Reliable hard worker, you can trust me to behave well, work hard and
-            be always on time. I am hard focues on the projects I do, if we
-            agree on something I will do it. I understand what I do and I will
-            be profesional at every given moment.
+            be always on time. Able to assume responsibility 
+            and learn from personal mistakes. Used to working under pressure and completing tasks
+            within time limits.
           </p>
         </div>
-        <div class="sisaj">
+        <div class="trait">
           <h2><i class="fas fa-hands-helping"></i>Helpful & Friendly.</h2>
           <p>
-            When I see a problem I am always happy to help. Some times people
-            help me with problems and sometimes I help them. We all work
-            together so there is no point in faults, only in results.
+            Open - minded team player who is good at communicating. Will never point fingers
+            and look for faults in others and their work. Instead, will always try to help out
+            the team or anyone who might be strugling. 
           </p>
         </div>
       </div>
     </section>
-    <section class="work">
+    <section class="work" id="work">
       <div class="project">
         <img
           src="/images/cofecafe.png"
@@ -203,7 +205,7 @@
                 design. Using Vanilla JS and CSS with no reliance on libraries I
                 made priceless experience.
               </p>
-              <a class="link-helper code" href=""
+              <a class="link-helper code" href="https://github.com/MilanJulinac42/coffee-shop" target="_blank"
                 ><i class="fab fa-github-square"></i> Code - GitHub</a
               >
             </div>
@@ -217,9 +219,7 @@
             <div class="section">
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
-                accusantium nobis. Error repellat quisquam dolore neque deserunt
-                a ab voluptates.
+                A dynamic, fully responsive website designed for browsing movies, tv shows and movie celebrities. Contains data from an open source database, you can go to a webpage of a specific movie, tv show or a celeb where you can find various data regarding those entities, ranging from user score, profit, description and trailer for movies and shows to biography and credits for celebs.
               </p>
               <a class="link-helper" href=""
                 ><i class="far fa-window-restore"></i> Live version</a
@@ -228,17 +228,12 @@
             <div class="section border-gray">
               <h4>Tech & experience</h4>
               <p>
-                For making of this website i used vanilla js and vanilla css.
-                Application of various fonts, including font awesome for icons,
-                modern css such as animations, transitions, flex box, grid and
-                many other things.
+                I made this using React.js with hooks for managing and transferring data through components, regarding style I used a mixture of react styled components, inline css and classic css. Data was pulled from third party open source database.
               </p>
               <p class="margin-top">
-                While making this I learned many things about responsive design.
-                Using Vanilla JS and CSS withouth no reliace on libraries I made
-                priceless experience.
+                It was excellent practising my skills in the most popular front end framework. Working with data sets this big gave me a new perspective about structuring react components hierarchy as well as managing and transferring data with hooks.
               </p>
-              <a class="link-helper code" href=""
+              <a class="link-helper code" href="https://github.com/MilanJulinac42/my-movie-app" target="_blank"
                 ><i class="fab fa-github-square"></i> Code - GitHub</a
               >
             </div>
@@ -254,21 +249,29 @@
         />
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <h2>Let's work together...</h2>
       <p>You can find me at:</p>
       <ul>
         <li>
-          <i class="fab fa-facebook-square"></i>
+          <a href="https://www.facebook.com/milan.julinac.9/" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+          </a>
         </li>
         <li>
-          <i class="fab fa-github-square"></i>
+          <a href="https://github.com/MilanJulinac42" target="_blank">
+            <i class="fab fa-github-square"></i>
+          </a>
         </li>
         <li>
-          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/milan-julinac-782604192/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </li>
         <li>
-          <i class="fab fa-instagram-square"></i>
+          <a href="https://www.instagram.com/milanjulinac/" target="_blank">
+            <i class="fab fa-instagram-square"></i>
+          </a>
         </li>
       </ul>
       <div class="mail-phone">
@@ -287,5 +290,6 @@
     <script>
       AOS.init({ once: true });
     </script>
+    <script src="app.js"></script>
   </body>
 </html>

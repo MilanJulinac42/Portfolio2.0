@@ -10,6 +10,7 @@
 body {
   font-family: "Raleway", sans-serif;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -40,6 +41,8 @@ nav {
   border-bottom: 1px solid #383738;
   -webkit-box-shadow: 0 5px 6px -6px black;
           box-shadow: 0 5px 6px -6px black;
+  min-height: 9vh;
+  max-height: 9vh;
 }
 
 nav h1 {
@@ -72,7 +75,7 @@ nav h1 span {
   }
 }
 
-nav ul {
+nav .nav-links {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,12 +83,82 @@ nav ul {
   gap: 1em;
 }
 
-nav ul li {
+nav .nav-links li {
   text-transform: uppercase;
 }
 
-nav ul a:hover {
+nav .nav-links a:hover {
   color: #b9b8b8;
+}
+
+@media (max-width: 680px) {
+  nav .nav-links {
+    position: absolute;
+    right: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 9vh;
+    width: 100%;
+    background: rgba(24, 23, 25, 0.7);
+    z-index: 20;
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  nav .nav-links li {
+    border-bottom: 1px solid white;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    opacity: 0;
+  }
+  @-webkit-keyframes navLinkFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+nav .burger {
+  display: none;
+}
+
+nav .burger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+@media (max-width: 680px) {
+  nav .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
 }
 
 .welcome-section {
@@ -352,7 +425,7 @@ nav ul a:hover {
   gap: 3em;
 }
 
-.more-about-me .about-container .sisaj {
+.more-about-me .about-container .trait {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -360,16 +433,16 @@ nav ul a:hover {
       flex-basis: 0;
 }
 
-.more-about-me .about-container .sisaj h2 {
+.more-about-me .about-container .trait h2 {
   font-size: 1.5em;
   color: white;
 }
 
-.more-about-me .about-container .sisaj h2 i {
+.more-about-me .about-container .trait h2 i {
   margin-right: 0.5em;
 }
 
-.more-about-me .about-container .sisaj p {
+.more-about-me .about-container .trait p {
   margin-top: 1em;
 }
 

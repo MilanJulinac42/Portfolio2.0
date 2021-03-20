@@ -14,6 +14,7 @@ $breakpoint-laptop-max: 1400px;
 body {
   font-family: "Raleway", sans-serif;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -37,6 +38,8 @@ nav {
   align-items: center;
   border-bottom: 1px solid #383738;
   box-shadow: 0 5px 6px -6px black;
+  min-height: 9vh;
+  max-height: 9vh;
   h1 {
     animation: type 0.5s steps(15);
     overflow: hidden;
@@ -54,7 +57,7 @@ nav {
       width: 15ch;
     }
   }
-  ul {
+  .nav-links {
     list-style: none;
     display: flex;
     gap: 1em;
@@ -63,6 +66,49 @@ nav {
     }
     a:hover {
       color: #b9b8b8;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      position: absolute;
+      right: 0px;
+      display: flex;
+      gap: 0;
+      flex-direction: column;
+      top: 9vh;
+      width: 100%;
+      background: rgba(24, 23, 25, 0.7);
+      z-index: 20;
+      transition: transform 0.5s ease-in;
+      li {
+        border-bottom: 1px solid white;
+        padding-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        opacity: 0;
+        @keyframes navLinkFade {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .burger {
+    display: none;
+  }
+  .burger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    .burger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
     }
   }
 }
@@ -228,7 +274,7 @@ nav {
     display: flex;
     padding-top: 5em;
     gap: 3em;
-    .sisaj {
+    .trait {
       flex-grow: 1;
       flex-basis: 0;
       h2 {
