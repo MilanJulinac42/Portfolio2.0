@@ -3,6 +3,11 @@ $breakpoint-tablet: 980px;
 $breakpoint-laptop: 1024px;
 $breakpoint-laptop-max: 1400px;
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 *,
 ::after,
 ::before {
@@ -527,4 +532,45 @@ footer {
   text-align: center;
   color: white;
   padding: 1em;
+}
+
+.top-link {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  width: 2rem;
+  height: 2rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: white;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  border-radius: 50%;
+  z-index: -100;
+  background-color: var(--clr-red);
+  img {
+    max-width: 1.5em;
+  }
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
